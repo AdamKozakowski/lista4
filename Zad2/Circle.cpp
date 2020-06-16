@@ -1,4 +1,5 @@
 #include "Circle.hpp"
+#include <iostream>
 
 double pi = 3.13159;
 
@@ -11,4 +12,11 @@ Circle::Circle(double r) :
 //metoda obliczania pola
 double Circle::area() const{
     return pi * _radius * _radius;
+}
+
+//Metoda wypisania
+std::ostream &Circle::print(std::ostream &out) const
+{
+    out << _name_of_figure << " o promieniu: " << _radius << "\n";
+    return out;
 }
