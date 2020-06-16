@@ -59,3 +59,8 @@ Complex0 sprzezenie(const Complex0 &c1){
     cx._real = c1._real;
     return cx;
 }
+
+//zaprzyjazniona funckja do wyswietlania wykorzystujaca przeciążony operator <<
+std::ostream& operator<<(std::ostream &out, const Complex0 &c){
+    return out << "(" << c.getReal() << ", " << c.getImag() << ")";
+}
