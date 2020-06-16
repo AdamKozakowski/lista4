@@ -27,3 +27,11 @@ double Complex0::getReal() const {
 double Complex0::getImag() const {
     return _imag;
 }
+
+//metoda dodawania na przeciazonym operatorze+
+Complex0 Complex0::operator+(const Complex0 &cx) const{
+    Complex0 suma;
+    suma._real = _real + cx._real;
+    suma._imag = _imag + cx._imag;
+    return suma;
+}
