@@ -1,4 +1,5 @@
 #include "complex0.hpp"
+#include <iostream>
 
 //konstruktor domyślny
 Complex0::Complex0() : _real(0), _imag(0){
