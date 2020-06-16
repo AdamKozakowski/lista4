@@ -1,0 +1,5 @@
+#ifndef RECTANGLE_HPP_INCLUDED
+#define RECTANGLE_HPP_INCLUDED
+
+
+#endif
