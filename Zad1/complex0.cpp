@@ -35,3 +35,11 @@ Complex0 Complex0::operator+(const Complex0 &cx) const{
     suma._imag = _imag + cx._imag;
     return suma;
 }
+
+//metoda odejmowania na przeciazonym operatorze-
+Complex0 Complex0::operator-(const Complex0 &cx) const{
+    Complex0 roznica;
+    roznica._real = _real - cx._real;
+    roznica._imag = _imag - cx._imag;
+    return roznica;
+}
