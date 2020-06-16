@@ -19,3 +19,11 @@ const Complex0 &Complex0::operator=(const Complex0 &cx){
     _real = cx._real;
     _imag = cx._imag;
 }
+
+//metoda do pobierania wartosci rzeczywistych i urojonych liczby zespolonej
+double Complex0::getReal() const {
+    return _real;
+}
+double Complex0::getImag() const {
+    return _imag;
+}
