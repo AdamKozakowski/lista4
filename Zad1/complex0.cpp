@@ -13,3 +13,9 @@ Complex0::Complex0(const Complex0 &cx){
     _real = cx._real;
     _imag = cx._imag;
 }
+
+//pomocniczy operator przypisania
+const Complex0 &Complex0::operator=(const Complex0 &cx){
+    _real = cx._real;
+    _imag = cx._imag;
+}
