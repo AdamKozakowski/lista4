@@ -1,0 +1,4 @@
+#ifndef TRIANGLE_HPP_INCLUDED
+#define TRIANGLE_HPP_INCLUDED
+
+#endif
