@@ -51,3 +51,11 @@ Complex0 Complex0::operator*(const Complex0 &cx) const{
     iloczyn._imag = _real * cx._imag + cx._real * _imag;
     return iloczyn;
 }
+
+//zaprzyjazniona funckja sprzezajaca
+Complex0 sprzezenie(const Complex0 &c1){
+    Complex0 cx;
+    cx._imag = - c1._imag;
+    cx._real = c1._real;
+    return cx;
+}
