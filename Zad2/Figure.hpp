@@ -1,0 +1,4 @@
+#ifndef FIGURE_HPP_INCLUDED
+#define FIGURE_HPP_INCLUDED
+
+#endif
