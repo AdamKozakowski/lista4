@@ -1,0 +1,4 @@
+#ifndef CIRCLE_HPP_INCLUDED
+#define CIRCLE_HPP_INCLUDED
+
+#endif
