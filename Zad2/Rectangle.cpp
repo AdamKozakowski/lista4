@@ -12,3 +12,8 @@ Rectangle::Rectangle(const double a, const double b) :
 double Rectangle::area () const {
     return _first_side * _secod_side;
 }
+
+std::ostream& Rectangle::print(std::ostream& out) const{
+    out << _name_of_figure << " o bokach: " << _first_side << " i " << _secod_side << "\n";
+    return out;
+}
