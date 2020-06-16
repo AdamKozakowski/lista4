@@ -43,3 +43,11 @@ Complex0 Complex0::operator-(const Complex0 &cx) const{
     roznica._imag = _imag - cx._imag;
     return roznica;
 }
+
+//metoda mnozenia na przeciazonym operatorze*
+Complex0 Complex0::operator*(const Complex0 &cx) const{
+    Complex0 iloczyn;
+    iloczyn._real = _real * cx._real - _imag * cx._imag;
+    iloczyn._imag = _real * cx._imag + cx._real * _imag;
+    return iloczyn;
+}
