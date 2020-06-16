@@ -15,3 +15,9 @@ double Triangle::area() const{
     double p = (_first_side + _second_side + _third_side)/2;
     return sqrt(p*(p-_first_side)*(p-_second_side)*(p-_third_side)); 
 }
+
+//metoda wypisywania
+std::ostream &Triangle::print(std::ostream &out) const{
+    out << _name_of_figure << " o bokach " << _first_side << ", " << _second_side << " i " << _third_side << "\n";
+    return out;
+}
