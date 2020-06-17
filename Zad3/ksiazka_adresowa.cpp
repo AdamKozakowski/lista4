@@ -96,3 +96,10 @@ bool e_clear(map<string, string> &ebook){
     }
     return false;
 }
+//funkcja wyswietlania
+void e_print(map<string, string> &ebook){
+    map<string, string>::iterator itr;
+    for (itr = ebook.begin(); itr != ebook.end(); itr++){
+        cout << itr->first << " : " << itr->second << "\n";
+    }
+}
