@@ -69,3 +69,19 @@ bool e_emplace(map<string, string> &ebook){
         return false;
     }
 }
+//funkcja usuwania
+bool e_erase(map<string, string> &ebook){
+    string name, email;
+    cin >> name;
+    try{
+        ebook.at(name);
+        ebook.erase(name);
+        cout << "Pomyslnie usunieto\n";
+        return true;
+    }
+    catch (const std::out_of_range &oor){
+        cout << "W bazie nie ma elementu o takim kluczu, sprawdz literowki\n";
+        return false;
+    }
+}
+
