@@ -50,3 +50,22 @@ bool e_at(map<string, string> &ebook){
         return false;
     }
 }
+//funkcja do zamiany wartosci
+bool e_emplace(map<string, string> &ebook){
+    string name, email;
+    cin >> name >> email;
+    size_t at = email.find_first_of('@');
+    size_t dot = email.find_last_of('.');
+    if (at != string::npos && at > dot){
+        ebook.emplace(name, email);
+        if (ebook[name] != email){
+            cout << "Nie udalo sie zamienic rekordu\n";
+            return false;
+        }
+        return true;
+    }
+    else{
+        cout << "Sprobuj ponownie podajac prawidlowy email (np. danhouser@email.com)\n";
+        return false;
+    }
+}
