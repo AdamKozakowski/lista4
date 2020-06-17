@@ -25,7 +25,7 @@ bool e_erase(std::map<std::string, std::string> &ebook);
 bool e_clear(std::map<std::string, std::string> &ebook);
 
 //funckja wyswietlania
-bool e_print(std::map<string, std::string> &ebook);
+bool e_print(std::map<std::string, std::string> &ebook);
 
 
 #endif
