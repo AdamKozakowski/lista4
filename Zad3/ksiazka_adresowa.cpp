@@ -84,4 +84,15 @@ bool e_erase(map<string, string> &ebook){
         return false;
     }
 }
-
+//funckja czyszczenia ksiazki
+bool e_clear(map<string, string> &ebook){
+    cout << "Czy na pewno chcesz usunac WSZYSTKIE elementy z ksiazki adresowej?\n [Y/n]\n";
+    char odp;
+    cin >> odp;
+    if (odp == 'Y' || odp == 'y'){
+        ebook.clear();
+        cout << "Pomyslnie usunieto wszystkie elementy\n";
+        return true;
+    }
+    return false;
+}
