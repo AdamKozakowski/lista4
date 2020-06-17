@@ -9,7 +9,7 @@
 //Funkcja wyswietlajaca mozliwe komendy
 void e_help();
 
-//funckja 
+//funckja wprowadzania nazw oraz adresów e-mail,
 bool e_insert(std::map<std::string, std::string> &ebook);
 
 //funkcja zwracajaca wartosc klucza
