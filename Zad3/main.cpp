@@ -63,5 +63,16 @@ int main(){
             cout << "Nieprawidlowa komenda, użyj HELP aby uzyskac liste komend\n";
         }
     }
-    
+    //aktualizuje dane
+    f.open("ksiazka_adresowa.csv", std::fstream::out | std::fstream::trunc);
+    if (!f){
+        cout << "Nie udalo sie otworzyc pliku\n";
+        return -1;
+    }
+    map<string, string>::iterator itr;
+    for (itr = ksiazka_adresowa.begin(); itr != ksiazka_adresowa.end(); itr++){
+        f << itr->first << " " << itr->second << "\n";
+    }
+    cout << "Zapisano dane do pliku \"ksiazka_adresowa.csv\"\n";
+    f.close();
 }
