@@ -37,18 +37,15 @@ bool e_insert(map<string, string> &ebook){
     }
 }
 //funkcja zwracajaca waartosc klucza
-bool e_at(map<string, string> &ebook)
-{
+bool e_at(map<string, string> &ebook){
     string name, email;
     cin >> name;
-    try
-    {
+    try{
         email = ebook.at(name);
         cout << name << " : " << email << "\n";
         return true;
     }
-    catch (const std::out_of_range &oor)
-    {
+    catch (const std::out_of_range &oor){
         cout << "W bazie nie ma elementu o takim kluczu, sprawdz literowki, lub sprobuj dodac element (INSERT)\n";
         return false;
     }
