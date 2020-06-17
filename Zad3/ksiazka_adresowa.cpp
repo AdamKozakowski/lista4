@@ -15,7 +15,7 @@ void e_help(){
          << "\t PRINT \t wypisuje na ekran wszystkie elementy ksiazki adresowej\n"
          << "\t EXIT \t konczy prace programu (program zapisze ksiazke do pliku \"ksiazka_adresowa.csv\", ktory odczyta przy kolejnym uruchomieniu)\n\n";
 }
-
+//funkcja do wpisywania nazw i emailow
 bool e_insert(map<string, string> &ebook){
     string name, email;
     cin >> name >> email;
@@ -33,6 +33,23 @@ bool e_insert(map<string, string> &ebook){
     }
     else{
         cout << "Sprobuj ponownie podajac prawidlowy email (np. danhouser@email.com)\n";
+        return false;
+    }
+}
+//funkcja zwracajaca waartosc klucza
+bool e_at(map<string, string> &ebook)
+{
+    string name, email;
+    cin >> name;
+    try
+    {
+        email = ebook.at(name);
+        cout << name << " : " << email << "\n";
+        return true;
+    }
+    catch (const std::out_of_range &oor)
+    {
+        cout << "W bazie nie ma elementu o takim kluczu, sprawdz literowki, lub sprobuj dodac element (INSERT)\n";
         return false;
     }
 }
