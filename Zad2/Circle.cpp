@@ -17,6 +17,6 @@ double Circle::area() const{
 //Metoda wypisania
 std::ostream &Circle::print(std::ostream &out) const
 {
-    out << _name_of_figure << " o promieniu: " << _radius << "\n";
+    out << _name_of_figure << " o promieniu: " << _radius;
     return out;
 }
