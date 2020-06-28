@@ -19,9 +19,9 @@ int main(){
     cout << "Pola figur:" << endl;
     //wczoraj działało, teraz pokazuje, że np circle nie ma składowej name.
     for(int i=0; i<3; i++){
-        cout << figures[i]->_name_of_figure << figures[i]->area() << endl;
+        cout << *figures[i] << " :\t"<< figures[i]->area() << endl;
     }
-    for(int i=3; 0 < i; i--){
+    for(int i=0; i<3; i++){
         delete figures[i];
     }
 
