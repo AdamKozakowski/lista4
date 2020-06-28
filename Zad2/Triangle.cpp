@@ -18,6 +18,6 @@ double Triangle::area() const{
 
 //metoda wypisywania
 std::ostream &Triangle::print(std::ostream &out) const{
-    out << _name_of_figure << " o bokach " << _first_side << ", " << _second_side << " i " << _third_side << "\n";
+    out << _name_of_figure << " o bokach " << _first_side << ", " << _second_side << " i " << _third_side;
     return out;
 }
