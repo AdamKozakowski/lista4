@@ -71,15 +71,28 @@ Complex0 operator-(const double r, const Complex0& cx){
     roznica._imag = -cx._imag;
     return roznica;
 }
-
-//metoda mnozenia na przeciazonym operatorze*
+//metody mnozenia na przeciazonym operatorze*
+// complex x complex
 Complex0 Complex0::operator*(const Complex0 &cx) const{
     Complex0 iloczyn;
     iloczyn._real = _real * cx._real - _imag * cx._imag;
     iloczyn._imag = _real * cx._imag + cx._real * _imag;
     return iloczyn;
 }
-
+//complex x real
+Complex0 Complex0::operator*(const double r) const{
+    Complex0 iloczyn;
+    iloczyn._real = _real * r;
+    iloczyn._imag = _imag * r;
+    return iloczyn;
+}
+//real x complex
+Complex0 operator*(const double r, const Complex0& cx){
+    Complex0 iloczyn;
+    iloczyn._real = cx._real * r;
+    iloczyn._imag = cx._imag * r;
+    return iloczyn;
+}
 //zaprzyjazniona funckja sprzezajaca
 Complex0 sprzezenie(const Complex0 &c1){
     Complex0 cx;
@@ -87,7 +100,6 @@ Complex0 sprzezenie(const Complex0 &c1){
     cx._real = c1._real;
     return cx;
 }
-
 //zaprzyjazniona funckja do wyswietlania wykorzystujaca przeciążony operator <<
 std::ostream& operator<<(std::ostream &out, const Complex0 &c){
     return out << "(" << c.getReal() << ", " << c.getImag() << ")";
