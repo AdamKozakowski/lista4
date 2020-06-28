@@ -50,12 +50,25 @@ Complex0 operator+ (const double r, const Complex0& cx){
     suma._imag = cx._imag;
     return suma;
 }
-
-//metoda odejmowania na przeciazonym operatorze-
+//metoda odejmowania liczb zespolonych na przeciazonym operatorze-
 Complex0 Complex0::operator-(const Complex0 &cx) const{
     Complex0 roznica;
     roznica._real = _real - cx._real;
     roznica._imag = _imag - cx._imag;
+    return roznica;
+}
+//metoda odejmowania liczb rzeczywistych od zespolonych na przeciazonym operatorze-
+Complex0 Complex0::operator-(const double r) const{
+    Complex0 roznica;
+    roznica._real = _real - r;
+    roznica._imag = _imag;
+    return roznica;  
+}
+//zaprzyjazniony przeciazony operator odejmowania liczb zespolonych od rzeczywistych 
+Complex0 operator-(const double r, const Complex0& cx){
+    Complex0 roznica;
+    roznica._real = r - cx._real;
+    roznica._imag = -cx._imag;
     return roznica;
 }
 
