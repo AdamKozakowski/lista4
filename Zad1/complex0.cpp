@@ -29,11 +29,25 @@ double Complex0::getImag() const {
     return _imag;
 }
 
-//metoda dodawania na przeciazonym operatorze+
+//metoda dodawania liczb zespolonych na przeciazonym operatorze+
 Complex0 Complex0::operator+(const Complex0 &cx) const{
     Complex0 suma;
     suma._real = _real + cx._real;
     suma._imag = _imag + cx._imag;
+    return suma;
+}
+//przeciazony operator dodawania liczby rzeczywistej do zespolonej
+Complex0 Complex0::operator+ (const double r) const{
+    Complex0 suma;
+    suma._real = _real + r;
+    suma._imag = _imag;
+    return suma;
+}
+//zaprzyjazniony przeciazony operator dodawania liczby zespolonej do rzeczywistej
+Complex0 operator+ (const double r, const Complex0& cx){
+    Complex0 suma;
+    suma._real = cx._real + r;
+    suma._imag = cx._imag;
     return suma;
 }
 
