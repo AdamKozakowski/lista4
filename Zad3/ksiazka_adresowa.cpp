@@ -56,13 +56,15 @@ bool e_emplace(map<string, string> &ebook){
     cin >> name >> email;
     size_t at = email.find_first_of('@');
     size_t dot = email.find_last_of('.');
-    if (at != string::npos && at > dot){
-        ebook.emplace(name, email);
-        if (ebook[name] != email){
-            cout << "Nie udalo sie zamienic rekordu\n";
-            return false;
+    if (at != string::npos && at < dot){
+        for(map<string,string>::iterator itr = ebook.begin(); itr!=ebook.end(); ++itr){
+            if( itr->first == name){
+            ebook[name]=email;
+            return true;
+            }
         }
-        return true;
+        cout << "W bazie nie ma takiego imienia!" << endl;
+        return false;
     }
     else{
         cout << "Sprobuj ponownie podajac prawidlowy email (np. danhouser@email.com)\n";
