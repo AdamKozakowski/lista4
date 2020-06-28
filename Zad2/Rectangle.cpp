@@ -14,6 +14,6 @@ double Rectangle::area () const {
 }
 
 std::ostream& Rectangle::print(std::ostream& out) const{
-    out << _name_of_figure << " o bokach: " << _first_side << " i " << _secod_side << "\n";
+    out << _name_of_figure << " o bokach: " << _first_side << " i " << _secod_side;
     return out;
 }
